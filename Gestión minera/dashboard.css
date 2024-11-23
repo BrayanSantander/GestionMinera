@@ -1,0 +1,221 @@
+/* main.css */
+
+/* --- Colores --- */
+:root {
+    --primary-color: #4170a2; /* Azul oscuro (para la cabecera, botones y encabezados) */
+    --secondary-color: #3498db; /* Azul claro (para botones, enlaces y gráficos) */
+    --background-color: #f4f6f9; /* Fondo claro */
+    --card-background: white; /* Fondo de tarjetas */
+    --text-color: #333; /* Texto oscuro */
+    --border-color: #ccc; /* Borde gris */
+    --hover-color: #2980b9; /* Color al pasar el cursor sobre botones */
+}
+
+/* --- Estilo Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- Cabecera y Navegación --- */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Main Content --- */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+/* --- Dashboard --- */
+.dashboard-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.summary-box {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 22%;
+    text-align: center;
+}
+
+.summary-box h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.summary-box p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.dashboard-chart {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-chart h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Tabla de Máquinas --- */
+.machine-table {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.machine-table h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+table td {
+    color: var(--text-color);
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Formularios --- */
+form {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+/* --- Gráficos --- */
+.report-chart {
+    margin-top: 2rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Respuesta a Dispositivos Móviles --- */
+@media (max-width: 768px) {
+    .dashboard-summary {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .summary-box {
+        width: 100%;
+    }
+
+    .machine-table {
+        padding: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+}

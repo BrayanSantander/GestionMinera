@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Maquinaria</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Geo-Operaciones</h1>
+        </div>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html" class="active">Inicio</a></li>
+            <li><a href="RegistroMaquina.html">Registrar Maquinaria</a></li>
+            <li><a href="ActualizarMaquina.html">Actualizar Maquinaria</a></li>
+            <li><a href="Historial.html">Historial</a></li>
+            <li><a href="informes.html">Generar Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Equipos pesados</h2>
+        <div class="dashboard-summary">
+            <div class="summary-box">
+                <h3>Total de Maquinaria</h3>
+                <p id="total-machines">10</p>
+            </div>
+            <div class="summary-box">
+                <h3>Máquinas Activas</h3>
+                <p id="active-machines">8</p>
+            </div>
+            <div class="summary-box">
+                <h3>Máquinas Inactivas</h3>
+                <p id="inactive-machines">2</p>
+            </div>
+        </div>
+
+
+        <div class="machine-table">
+            <h3>Máquinas Registradas</h3>
+            <table id="machine-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán los datos de las máquinas -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="firebase.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

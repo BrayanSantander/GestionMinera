@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Maquinaria</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Geo-Operaciones</h1>
+        </div>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="RegistroMaquina.html" class="active">Registrar Maquinaria</a></li>
+            <li><a href="ActualizarMaquina.html">Actualizar Maquinaria</a></li>
+            <li><a href="Historial.html">Historial</a></li>
+            <li><a href="informes.html">Generar Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Formulario de Registro</h2>
+        <form id="register-machine-form">
+            <label for="machine-code">Código de la Máquina</label>
+            <input type="text" id="machine-code" required>
+
+            <label for="machine-name">Nombre de la Máquina</label>
+            <input type="text" id="machine-name" required>
+
+            <label for="machine-description">Descripción</label>
+            <textarea id="machine-description" required></textarea>
+
+            <button type="submit">Registrar Máquina</button>
+        </form>
+    </main>
+
+    <script src="firebase.js"></script>
+</body>
+</html>

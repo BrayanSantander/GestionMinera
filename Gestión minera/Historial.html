@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Reportes</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Geo-Operaciones</h1>
+        </div>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="RegistroMaquina.html">Registrar Maquinaria</a></li>
+            <li><a href="ActualizarMaquina.html">Actualizar Maquinaria</a></li>
+            <li><a href="Historial.html" class="active">Historial</a></li>
+            <li><a href="informes.html">Generar Reportes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Historial de Reportes de Maquinaria</h2>
+        <div class="report-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Máquina</th>
+                        <th>Fecha</th>
+                        <th>Detalles</th>
+                        <th>Documento</th>
+                    </tr>
+                </thead>
+                <tbody id="reportList">
+                    <!-- Aquí se llenarán los reportes dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Simulación de datos: se puede reemplazar con datos reales desde una base de datos
+        const reports = [
+            { machine: "Máquina 1", date: "2024-11-20", details: "Reporte detallado del mantenimiento.", document: "reporte1.pdf" },
+            { machine: "Máquina 2", date: "2024-11-19", details: "Inspección de rutina completada.", document: "reporte2.pdf" },
+            { machine: "Máquina 3", date: "2024-11-18", details: "Fallo detectado en el motor.", document: "reporte3.pdf" }
+        ];
+
+        const reportList = document.getElementById("reportList");
+
+        reports.forEach(report => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${report.machine}</td>
+                <td>${report.date}</td>
+                <td>${report.details}</td>
+                <td><a href="${report.document}" download>Descargar</a></td>
+            `;
+
+            reportList.appendChild(row);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* --- Colores --- */
+:root {
+    --primary-color: #2d3e50; /* Azul oscuro */
+    --secondary-color: #3498db; /* Azul claro */
+    --background-color: #f4f6f9; /* Fondo claro */
+    --card-background: white; /* Fondo de tarjetas */
+    --text-color: #333; /* Texto oscuro */
+    --border-color: #ccc; /* Borde gris */
+    --hover-color: #2980b9; /* Color al pasar el cursor sobre botones */
+}
+
+/* --- Estilo Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- Estilo del Formulario de Login --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.login-card {
+    background-color: var(--card-background);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    background-color: #fff;
+}
+
+form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Enlaces de navegación */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.forgot-password a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* --- Respuesta a Dispositivos Móviles --- */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 2rem;
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem;
+    }
+
+    form input, form button {
+        font-size: 1rem;
+    }
+}

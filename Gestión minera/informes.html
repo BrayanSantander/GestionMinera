@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte de Maquinaria</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Geo-Operaciones</h1>
+        </div>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="RegistroMaquina.html">Registrar Maquinaria</a></li>
+            <li><a href="ActualizarMaquina.html">Actualizar Maquinaria</a></li>
+            <li><a href="Historial.html">Historial</a></li>
+            <li><a href="informes.html" class="active">Generar Reportes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Generar Reporte de Maquinaria</h2>
+        <form id="reportForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="machineSelect">Seleccionar Máquina:</label>
+                <select id="machineSelect" name="machine" required>
+                    <option value="" disabled selected>Seleccione una máquina</option>
+                    <option value="machine1">Máquina 1</option>
+                    <option value="machine2">Máquina 2</option>
+                    <option value="machine3">Máquina 3</option>
+                    <!-- Estas opciones deben generarse dinámicamente según las máquinas registradas -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reportDate">Fecha del Reporte:</label>
+                <input type="date" id="reportDate" name="reportDate" required>
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Subir Documento:</label>
+                <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.xlsx,.png,.jpg" required>
+            </div>
+            <div class="form-group">
+                <label for="machineDetails">Detalles de la Máquina:</label>
+                <textarea id="machineDetails" name="machineDetails" rows="5" placeholder="Escriba los detalles del estado o actividades realizadas..." required></textarea>
+            </div>
+            <button type="submit">Generar Reporte</button>
+        </form>
+    </main>
+
+    <script>
+        // Placeholder para gestionar el formulario
+        document.getElementById('reportForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Reporte generado con éxito.');
+            // Aquí se puede agregar la lógica para manejar la subida del archivo y el almacenamiento en la base de datos
+        });
+    </script>
+</body>
+</html>

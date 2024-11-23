@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Maquinaria</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Geo-Operaciones</h1>
+        </div>
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="RegistroMaquina.html">Registrar Maquinaria</a></li>
+            <li><a href="ActualizarMaquina.html" class="active">Actualizar Maquinaria</a></li>
+            <li><a href="Historial.html">Historial</a></li>
+            <li><a href="informes.html">Generar Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Actualizar Estado de Maquinaria</h2>
+        <form id="update-machine-form">
+            <label for="machine-id">Seleccionar Máquina</label>
+            <select id="machine-id" required>
+                <!-- Aquí irán las opciones de máquinas registradas -->
+            </select>
+
+            <label for="machine-status">Estado de la Máquina</label>
+            <select id="machine-status">
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+
+                      </select>
+
+            <label for="machine-status">Estado de la Máquina</label>
+            <select id="machine-status">
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+            </select>
+
+            <label for="tipo">Tipo de Máquina</label>
+            <select id="tipo">
+                <option value="levante">Equipo de levante</option>
+                <option value="perforacion">Perforación</option>
+                <option value="Extracción">Extracción</option>
+            </select>
+            <label for="detalle">Detalle</label>
+            <input type="text" id="detalle">
+            
+            <label for="machine-location">Ubicación</label>
+            <input type="text" id="machine-location">
+
+
+            <button type="submit">Actualizar Máquina</button>
+        </form>
+    </main>
+
+    <script src="js/machinery.js"></script>
+</body>
+</html>
